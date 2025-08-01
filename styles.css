@@ -263,11 +263,11 @@ body {
 }
 
 .phone-screen {
-    width: 320px;
-    height: 640px;
+    width: 300px;
+    height: 600px;
     background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
-    border-radius: 35px;
-    padding: 25px;
+    border-radius: 30px;
+    padding: 20px;
     box-shadow: 
         0 20px 40px rgba(0, 0, 0, 0.5),
         0 0 30px rgba(59, 130, 246, 0.3),
@@ -321,6 +321,151 @@ body {
     font-weight: 600;
     margin-bottom: 20px;
     color: #3b82f6;
+}
+
+/* Scanning Animation Styles */
+.scanning-animation {
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+    animation: scanMove 3s ease-in-out infinite;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.8);
+}
+
+@keyframes scanMove {
+    0% { left: -100%; }
+    50% { left: 100%; }
+    100% { left: -100%; }
+}
+
+.scan-progress {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    border-radius: 4px;
+    animation: progressFill 4s ease-in-out infinite;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+@keyframes progressFill {
+    0% { width: 0%; }
+    50% { width: 75%; }
+    100% { width: 100%; }
+}
+
+.progress-text {
+    color: #3b82f6;
+    font-size: 0.9rem;
+    font-weight: 600;
+    animation: textPulse 2s ease-in-out infinite;
+}
+
+@keyframes textPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.scan-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.scan-stat {
+    text-align: center;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 10px;
+    padding: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.scan-stat i {
+    color: #3b82f6;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.scan-stat .stat-number {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #22c55e;
+    margin-bottom: 5px;
+}
+
+.scan-stat .stat-label {
+    font-size: 0.8rem;
+    color: #a1a1aa;
+}
+
+.recent-scans {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.scan-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: #d1d5db;
+}
+
+.scan-item:last-child {
+    margin-bottom: 0;
+}
+
+.scan-item i {
+    font-size: 0.8rem;
+}
+
+.scan-item i.fa-check-circle {
+    color: #22c55e;
+}
+
+.scan-item.scanning i {
+    color: #3b82f6;
+}
+
+.scan-item.scanning span {
+    color: #3b82f6;
+    animation: scanningPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes scanningPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
 }
 
 .status-card {
@@ -1261,8 +1406,8 @@ section::before {
     }
 
     .phone-screen {
-        width: 280px;
-        height: 560px;
+        width: 260px;
+        height: 520px;
     }
 
     .section-title {
@@ -1311,9 +1456,9 @@ section::before {
     }
 
     .phone-screen {
-        width: 240px;
-        height: 480px;
-        padding: 20px;
+        width: 220px;
+        height: 440px;
+        padding: 15px;
     }
 
     .app-card,

@@ -64,22 +64,43 @@
                         </div>
                         <div class="app-screen">
                             <div class="app-header">
-                                <i class="fas fa-fire"></i>
-                                <span>Firewall Protection</span>
+                                <i class="fas fa-shield-virus"></i>
+                                <span>Security Scanner</span>
                             </div>
                             <div class="app-content">
-                                <div class="status-card active">
-                                    <i class="fas fa-shield-check"></i>
-                                    <span>Firewall Active</span>
-                                </div>
-                                <div class="stats">
-                                    <div class="stat">
-                                        <span class="stat-number">1,247</span>
-                                        <span class="stat-label">Threats Blocked</span>
+                                <div class="scanning-animation">
+                                    <div class="scan-line"></div>
+                                    <div class="scan-progress">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill"></div>
+                                        </div>
+                                        <span class="progress-text">Scanning Files...</span>
                                     </div>
-                                    <div class="stat">
-                                        <span class="stat-number">99.9%</span>
-                                        <span class="stat-label">Protection Rate</span>
+                                </div>
+                                <div class="scan-stats">
+                                    <div class="scan-stat">
+                                        <i class="fas fa-file-alt"></i>
+                                        <span class="stat-number">2,847</span>
+                                        <span class="stat-label">Files Scanned</span>
+                                    </div>
+                                    <div class="scan-stat">
+                                        <i class="fas fa-shield-check"></i>
+                                        <span class="stat-number">Clean</span>
+                                        <span class="stat-label">System Status</span>
+                                    </div>
+                                </div>
+                                <div class="recent-scans">
+                                    <div class="scan-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>System Files ✓</span>
+                                    </div>
+                                    <div class="scan-item">
+                                        <i class="fas fa-check-circle"></i>
+                                        <span>Apps ✓</span>
+                                    </div>
+                                    <div class="scan-item scanning">
+                                        <i class="fas fa-spinner fa-spin"></i>
+                                        <span>Downloads...</span>
                                     </div>
                                 </div>
                             </div>
