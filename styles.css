@@ -29,7 +29,7 @@ body {
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(59, 130, 246, 0.2);
     z-index: 1000;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     transition: all 0.3s ease;
 }
 
@@ -45,15 +45,15 @@ body {
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #3b82f6;
     text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
 }
 
 .nav-logo i {
-    font-size: 2rem;
+    font-size: 1.5rem;
     animation: glow 2s ease-in-out infinite alternate;
 }
 
@@ -64,7 +64,7 @@ body {
 
 .nav-menu {
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
     list-style: none;
 }
 
@@ -72,9 +72,10 @@ body {
     text-decoration: none;
     color: #ffffff;
     font-weight: 500;
+    font-size: 0.9rem;
     transition: all 0.3s ease;
     position: relative;
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 0.8rem;
     border-radius: 8px;
 }
 
@@ -123,7 +124,7 @@ body {
     background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
     position: relative;
     overflow: hidden;
-    padding: 120px 0 80px;
+    padding: 100px 0 80px;
 }
 
 .hero::before {
@@ -159,7 +160,7 @@ body {
 }
 
 .hero-title {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
     line-height: 1.2;
@@ -176,7 +177,7 @@ body {
 }
 
 .hero-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     margin-bottom: 2rem;
     color: #a1a1aa;
     animation: fadeInUp 1s ease-out 0.5s both;
@@ -193,10 +194,11 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 1rem 2rem;
+    padding: 0.8rem 1.5rem;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
+    font-size: 0.9rem;
     transition: all 0.3s ease;
     border: none;
     cursor: pointer;
@@ -245,12 +247,14 @@ body {
     box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
 }
 
-/* Phone Mockup */
+/* Phone Mockup - Fixed Visibility */
 .phone-mockup {
     position: relative;
     display: flex;
     justify-content: center;
     animation: phoneFloat 6s ease-in-out infinite;
+    opacity: 1;
+    visibility: visible;
 }
 
 @keyframes phoneFloat {
@@ -270,6 +274,8 @@ body {
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
     position: relative;
     border: 1px solid rgba(59, 130, 246, 0.3);
+    opacity: 1;
+    visibility: visible;
 }
 
 .phone-header {
@@ -564,7 +570,7 @@ section::before {
     box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
 }
 
-/* How It Works Section */
+/* How It Works Section - Fixed Badge Display */
 .how-it-works {
     background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
 }
@@ -667,7 +673,7 @@ section::before {
     z-index: 2;
 }
 
-/* Why Choose Us Section */
+/* Why Choose Us Section - Fixed Display Issues */
 .why-choose-us {
     background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
 }
@@ -741,6 +747,7 @@ section::before {
     position: relative;
     z-index: 2;
     text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+    display: block;
 }
 
 .stat-label {
@@ -748,6 +755,7 @@ section::before {
     font-weight: 500;
     position: relative;
     z-index: 2;
+    display: block;
 }
 
 /* Trusted & Certified Section */

@@ -125,12 +125,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Enhanced phone mockup animation
+// Enhanced phone mockup animation - Fixed Visibility
 function animatePhoneMockup() {
     const phoneScreen = document.querySelector('.phone-screen');
+    const phoneMockup = document.querySelector('.phone-mockup');
+    
     if (phoneScreen) {
         phoneScreen.style.transform = 'translateY(0) rotateY(0)';
         phoneScreen.style.opacity = '1';
+        phoneScreen.style.visibility = 'visible';
         
         // Add glow effect
         phoneScreen.style.boxShadow = `
@@ -140,20 +143,37 @@ function animatePhoneMockup() {
             inset 0 1px 0 rgba(255, 255, 255, 0.1)
         `;
     }
+    
+    if (phoneMockup) {
+        phoneMockup.style.opacity = '1';
+        phoneMockup.style.visibility = 'visible';
+    }
 }
 
 // Initialize phone mockup animation
 document.addEventListener('DOMContentLoaded', () => {
     const phoneMockup = document.querySelector('.phone-mockup');
+    const phoneScreen = document.querySelector('.phone-screen');
+    
     if (phoneMockup) {
-        phoneMockup.style.opacity = '0';
-        phoneMockup.style.transform = 'translateY(50px) rotateY(-10deg)';
+        // Ensure initial visibility
+        phoneMockup.style.opacity = '1';
+        phoneMockup.style.visibility = 'visible';
+        phoneMockup.style.transform = 'translateY(0) rotateY(0)';
         phoneMockup.style.transition = 'all 1s ease-out';
-        
-        setTimeout(() => {
-            animatePhoneMockup();
-        }, 500);
     }
+    
+    if (phoneScreen) {
+        // Ensure initial visibility
+        phoneScreen.style.opacity = '1';
+        phoneScreen.style.visibility = 'visible';
+        phoneScreen.style.transform = 'translateY(0) rotateY(0)';
+    }
+    
+    // Add entrance animation after a short delay
+    setTimeout(() => {
+        animatePhoneMockup();
+    }, 500);
 });
 
 // Enhanced parallax effect for hero section
