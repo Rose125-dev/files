@@ -566,12 +566,20 @@ section::before {
 .apps-grid {
     display: flex;
     flex-wrap: nowrap;
-    gap: 1rem;
+    gap: 1.5rem;
     position: relative;
     z-index: 2;
-    justify-content: space-between;
+    justify-content: center;
     align-items: stretch;
     width: 100%;
+    overflow-x: auto;
+    padding: 1rem 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.apps-grid::-webkit-scrollbar {
+    display: none;
 }
 
 .app-card {
@@ -588,10 +596,10 @@ section::before {
     display: flex;
     flex-direction: column;
     height: 100%;
-    flex: 1 1 0;
-    width: calc(25% - 0.75rem);
-    min-height: 550px;
-    max-width: calc(25% - 0.75rem);
+    flex: 0 0 320px;
+    width: 320px;
+    height: 500px;
+    max-width: 320px;
 }
 
 .app-card::before {
@@ -1448,16 +1456,16 @@ section::before {
     }
 
     .apps-grid {
-        gap: 0.75rem;
-        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: flex-start;
     }
     
     .app-card {
-        flex: 1 1 0;
-        width: calc(50% - 0.375rem);
-        max-width: calc(50% - 0.375rem);
+        flex: 0 0 280px;
+        width: 280px;
+        height: 450px;
+        max-width: 280px;
         padding: 1.5rem;
-        min-height: 500px;
     }
     
     .steps-grid,
@@ -1507,11 +1515,11 @@ section::before {
     }
 
     .app-card {
-        flex: 1 1 0;
-        width: 100%;
-        max-width: 100%;
+        flex: 0 0 260px;
+        width: 260px;
+        height: 400px;
+        max-width: 260px;
         padding: 1.5rem;
-        min-height: 450px;
     }
     
     .step-card,
