@@ -45,16 +45,24 @@ body {
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     font-weight: 700;
     font-size: 1.4rem;
     color: #3b82f6;
     text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-logo:hover {
+    color: #60a5fa;
+    text-shadow: 0 0 15px rgba(59, 130, 246, 0.7);
 }
 
 .nav-logo i {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     animation: glow 2s ease-in-out infinite alternate;
+    filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.6));
 }
 
 @keyframes glow {
@@ -1295,17 +1303,19 @@ section::before {
 .footer-logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     font-weight: 700;
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: #3b82f6;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
 }
 
 .footer-logo i {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #3b82f6;
     animation: glow 2s ease-in-out infinite alternate;
+    filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.6));
 }
 
 .footer-section h3 {
