@@ -564,19 +564,11 @@ section::before {
 }
 
 .apps-grid {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
     position: relative;
     z-index: 2;
-    overflow-x: auto;
-    padding: 1rem 0;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-.apps-grid::-webkit-scrollbar {
-    display: none;
 }
 
 .app-card {
@@ -593,8 +585,7 @@ section::before {
     display: flex;
     flex-direction: column;
     height: 100%;
-    min-width: 300px;
-    flex-shrink: 0;
+
 }
 
 .app-card::before {
