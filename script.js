@@ -265,7 +265,6 @@ document.addEventListener('DOMContentLoaded', () => {
     downloadButtons.forEach(button => {
         button.addEventListener('click', () => {
             // Track download clicks (you can add analytics here)
-            console.log('Download button clicked:', button.textContent);
             
             // Add click effect
             button.style.transform = 'scale(0.95)';
@@ -379,7 +378,6 @@ document.addEventListener('DOMContentLoaded', () => {
     images.forEach(img => {
         img.addEventListener('error', () => {
             img.style.display = 'none';
-            console.warn('Failed to load image:', img.src);
         });
     });
 });
@@ -405,10 +403,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (Math.abs(diff) > swipeThreshold) {
             if (diff > 0) {
                 // Swipe up
-                console.log('Swipe up detected');
             } else {
                 // Swipe down
-                console.log('Swipe down detected');
             }
         }
     }
@@ -565,5 +561,3 @@ function createMouseTrail() {
 
 // Initialize mouse trail
 document.addEventListener('DOMContentLoaded', createMouseTrail);
-
-console.log('MadMax Technologies website loaded successfully with enhanced dark theme and animations!');

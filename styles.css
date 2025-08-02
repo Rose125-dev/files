@@ -913,12 +913,12 @@ section::before {
 }
 
 /* Special character fixes for stat numbers */
-.stat-card:nth-child(2) .stat-number::after {
+.stats-grid .stat-card:nth-child(2) .stat-number::after {
     content: "+";
     color: #3b82f6;
 }
 
-.stat-card:nth-child(3) .stat-number::before {
+.stats-grid .stat-card:nth-child(3) .stat-number::before {
     content: "<";
     color: #3b82f6;
 }
