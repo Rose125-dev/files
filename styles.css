@@ -589,7 +589,7 @@ section::before {
     height: 100%;
     flex: 1;
     max-width: calc(25% - 0.75rem);
-    min-height: 500px;
+    min-height: 550px;
 }
 
 .app-card::before {
@@ -703,6 +703,7 @@ section::before {
     overflow: hidden;
     margin-top: auto;
     justify-content: center;
+    width: 100%;
 }
 
 .app-download::before {
@@ -925,6 +926,11 @@ section::before {
 
 .stats-grid .stat-card:nth-child(3) .stat-number::before {
     content: "<";
+    color: #3b82f6;
+}
+
+.stats-grid .stat-card:nth-child(3) .stat-number::after {
+    content: "s";
     color: #3b82f6;
 }
 
@@ -1448,7 +1454,7 @@ section::before {
         flex: 1 1 calc(50% - 0.375rem);
         max-width: calc(50% - 0.375rem);
         padding: 1.5rem;
-        min-height: 450px;
+        min-height: 500px;
     }
     
     .steps-grid,
@@ -1501,7 +1507,7 @@ section::before {
         flex: 1 1 100%;
         max-width: 100%;
         padding: 1.5rem;
-        min-height: 400px;
+        min-height: 450px;
     }
     
     .step-card,
