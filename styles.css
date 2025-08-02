@@ -901,6 +901,7 @@ section::before {
     display: block;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     unicode-bidi: normal;
+    white-space: nowrap;
 }
 
 .stat-label {
@@ -909,6 +910,17 @@ section::before {
     position: relative;
     z-index: 2;
     display: block;
+}
+
+/* Special character fixes for stat numbers */
+.stat-card:nth-child(2) .stat-number::after {
+    content: "+";
+    color: #3b82f6;
+}
+
+.stat-card:nth-child(3) .stat-number::before {
+    content: "<";
+    color: #3b82f6;
 }
 
 /* Trusted & Certified Section */
